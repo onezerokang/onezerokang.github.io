@@ -9,3 +9,13 @@ The `index.md` in the `/docs` folder is the homepage you see here.
 The folders in `/docs` appear as the main sections on the navigation bar.
 
 The notes appear as pages within these sections. For example, [[Note 1]] in `Topic 1`
+
+## Code Block
+
+```java
+public class CodeBlock {
+    public static void main(String[] args) {
+        System.out.println("Hello My Blog..!");
+    }
+}
+```
