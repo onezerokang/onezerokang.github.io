@@ -48,7 +48,10 @@ markdown_extensions:
       permalink: true
 
 plugins:
-  - search
+  - search:
+      lang:
+        - ko
+        - en
   - roamlinks
 
 extra_javascript:
