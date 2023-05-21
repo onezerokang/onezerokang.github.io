@@ -1,21 +1,7 @@
-# Obsidian Notes
+# 테크피디아:대문
 
-Publish your public notes with MkDocs
+테크피디아에 오신 것을 환영합니다!
 
-## Hello World!
+테크피디아는 개발 지식을 축적하고 체계화하기 위해 생성한 [onezerokang](https://github.com/onezerokang)의 블로그입니다.
 
-The `index.md` in the `/docs` folder is the homepage you see here.
-
-The folders in `/docs` appear as the main sections on the navigation bar.
-
-The notes appear as pages within these sections. For example, [[Note 1]] in `Topic 1`
-
-## Code Block
-
-```java
-public class CodeBlock {
-    public static void main(String[] args) {
-        System.out.println("Hello My Blog..!");
-    }
-}
-```
+내용에서 오류를 발견할 경우 피드백 주시면 반영하도록 하겠습니다. 그럼 좋은 하루 보내시길 바랍니다.
