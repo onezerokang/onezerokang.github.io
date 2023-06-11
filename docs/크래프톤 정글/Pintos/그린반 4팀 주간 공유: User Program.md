@@ -46,6 +46,9 @@ pintos의 함수를 보며 어떤 과정을 거쳐 프로그램이 실행되는�
 
 ### 3.1. process_exec()
 
+string.c/strtok_r 함수를 이용해 file_name을 파싱한다.
+strtok_r 함수는 공백을 기준으로 문자열을 쪼개고 다음 문자열의 주소를 save_ptr가 가리키게 한다.
+
 ```c
 /* Switch the current execution context to the f_name.
  * Returns -1 on fail. */
@@ -95,6 +98,8 @@ process_exec (void *f_name) {
 
 ### 3.2. argument_stack()
 
+파싱한 인자를 stack에 넣는다.
+
 ```c
 void argument_stack(char **parse, int count, void **rsp) {
 	// 프로그램 이름, 인자 문자열 push
@@ -128,6 +133,9 @@ void argument_stack(char **parse, int count, void **rsp) {
 ```
 
 ### 3.3. process_wait()
+
+현재 핀토스는 프로그램을 실행한 후, 바로 종료 되어버린다.
+따라서 loop을 이용해 핀토스가 바로 종료되지 않게 수정해야 한다.
 
 ```c
 int
