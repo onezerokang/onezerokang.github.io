@@ -19,9 +19,9 @@
 pintos-mkdisk filesys.dsk 10
 ```
 
-![image](https://github.com/onezerokang/onezerokang.github.io/assets/60874549/69f37e37-0d4d-47ea-b1d5-bab33cd5f184)
+<p align="center"><img src="https://github.com/onezerokang/onezerokang.github.io/assets/60874549/c2298800-6b6b-4fb5-a57b-349ce4c97ae5" width="264px"></p>
 
-_(filesys.dsk가 생성된 모습)_
+<p align="center">_(filesys.dsk가 생성된 모습)_</p>
 
 아래 명령어를 터미널에 입력하면 핀토스가 부팅되고 filesys.dsk에 있는 'args-single onearg'라는 파일을 실행한다.
 
