@@ -1,12 +1,12 @@
 # [Pintos] 그린반 4팀 주간 공유: User Program
 
-## 공부 방식
+## 1. 공부 방식
 
 -   6월 1일 ~ 6월 7일: gitboot, ppt 자료를 읽으며 구현
 -   6월 8일 ~ 6월 10일: blog 코드를 보고 분석하는 방향으로 선회
 -   6월 11일 ~ 6월 12일: 다시 처음부터 구현
 
-## 핀토스에서 프로그램을 실행하기
+## 2. 핀토스에서 프로그램을 실행하기
 
 프로그램을 실행하기 위해서는 디스크에서 실행 가능한 파일을 읽어야 한다.
 
@@ -42,15 +42,15 @@ pintos의 함수를 보며 어떤 과정을 거쳐 프로그램이 실행되는�
 -   `process.c/load`: 페이지 테이블을 생성하고, ELF 헤더를 읽고, 파싱한다. ELF의 data를 data segment에 로드한다. 유저 스택을 생성하고 초기화 한다.
 -   `thread.c/do_iret`: 커널 모드를 유저 모드로 전환한다.
 
-## Argument Passing
+## 3. Argument Passing
 
-### process_exec()
+### 3.1 process_exec()
 
-### argument_stack()
+### 3.2 argument_stack()
 
-### process_wait()
+### 3.3 process_wait()
 
-### 회고
+## 4. 회고
 
 -   팀원 1:
 -   팀원 2:
