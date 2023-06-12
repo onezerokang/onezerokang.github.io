@@ -100,6 +100,8 @@ process_exec (void *f_name) {
 
 파싱한 인자를 stack에 넣는다.
 
+<p align="center"><img width="576" alt="image" src="https://github.com/onezerokang/onezerokang.github.io/assets/60874549/5ff1bb0a-9662-4edc-b4f8-e78f42b196c1"></p>
+
 ```c
 void argument_stack(char **parse, int count, void **rsp) {
 	// 프로그램 이름, 인자 문자열 push
