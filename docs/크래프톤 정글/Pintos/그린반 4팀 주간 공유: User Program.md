@@ -36,10 +36,10 @@ pintos의 함수를 보며 어떤 과정을 거쳐 프로그램이 실행되는�
 -   `init.c/run_actions(argv)`: 주어진 action을 실행하는 함수(ex: run, put)
 -   `init.c/run_task`: 프로그램 실행의 첫 진입점.
 -   `process.c/processs_create_initd`: file_name을 복제하고(`load()` 함수와 경쟁하지 않기 위해) `thread_create()` 함수를 호출한다.
--   `thread.c/thread_create`: 스레드 생성 후 initd 함수 실행
--   `process.c/initd`: `process_init()`, `process_exec()` 함수 실행
+-   `thread.c/thread_create`: 스레드 생성 후 initd 함수 호출
+-   `process.c/initd`: `process_init()`, `process_exec()` 함수 호출
 -   `process.c/process_exec`: `load()` 함수를 호출하고 load에 성공하면 `do_iret` 함수를 호출한다.
--   `process.c/load`: 페이지 테이블을 생성하고, ELF 헤더를 읽고, 파싱한다. ELF의 data를 data segment에 로드한다. 유저 스택을 생성하고 초기화 한다.
+-   `process.c/load`: 페이지 테이블을 생성하고, ELF 헤더를 읽고, 파싱한 후 segment를 설정합니다. 그리고 유저 스택을 생성하고 초기화 한다.
 -   `thread.c/do_iret`: 커널 모드를 유저 모드로 전환하고 프로세스를 시작한다.
 
 ## 3. Argument Passing
@@ -80,8 +80,8 @@ process_exec (void *f_name) {
 
 
 	argument_stack(parse, count, &_if.rsp);
-	_if.R.rdi = count;
-	_if.R.rsi = (char *)_if.rsp +8 ;
+	_if.R.rdi = count; //  argc
+	_if.R.rsi = (char *)_if.rsp +8; // argv[0]: 현재 스택포인터는 fake address를 가리키므로 8을 더한다.
 
 	hex_dump(_if.rsp, _if.rsp, USER_STACK - (uint64_t)_if.rsp, true);
 
@@ -113,7 +113,7 @@ void argument_stack(char **parse, int count, void **rsp) {
         parse[i] = *(char **)rsp; // parse[i]에 현재 rsp의 값 저장해둠(지금 저장한 인자가 시작하는 주소값)
     }
 
- 	while ((int)(*rsp) % 8 != 0) { //스택 포인터가 8의 배수가 되도록
+ 	while ((int)(*rsp) % 8 != 0) { //스택 포인터가 8의 배수가 되도록 padding 삽입
         (*rsp)--;  // 스택 포인터를 1바이트씩 이동
         **(uint8_t **)rsp = 0;
     }
