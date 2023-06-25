@@ -2,6 +2,7 @@ site_name: Techpedia
 
 theme:
     name: "material"
+    font: "Noto Sans Korean"
     palette:
         # Light mode
         - media: "(prefers-color-scheme: light)"
