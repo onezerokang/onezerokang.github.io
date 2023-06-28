@@ -1,0 +1,1013 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Pintos/%EA%B7%B8%EB%A6%B0%EB%B0%98%204%ED%8C%80%20%EC%A3%BC%EA%B0%84%20%EA%B3%B5%EC%9C%A0%3A%20User%20Program/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+    
+    
+      
+        <title>크래프톤 정글 중간 회고 - Techpedia</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Techpedia" class="md-header__button md-logo" aria-label="Techpedia" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Techpedia
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              크래프톤 정글 중간 회고
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Techpedia" class="md-nav__button md-logo" aria-label="Techpedia" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Techpedia
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        테크피디아:대문
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Books
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Books
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/%ED%98%BC%EC%9E%90%20%EA%B3%B5%EB%B6%80%ED%95%98%EB%8A%94%20%EC%BB%B4%ED%93%A8%ED%84%B0%20%EA%B5%AC%EC%A1%B0%2B%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/" class="md-nav__link">
+        혼자 공부하는 컴퓨터 구조+운영체제
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          자바의 신
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          자바의 신
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0/%5B%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0%5D%2010%EC%9E%A5/" class="md-nav__link">
+        [자바의 신] 10장: 자바에는 상속이라는 것이 있어요
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0/%5B%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0%5D%202%EC%9E%A5%20~%207%EC%9E%A5/" class="md-nav__link">
+        [자바의 신] 2장 ~ 7장
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Books/%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0/%5B%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0%5D%209%EC%9E%A5/" class="md-nav__link">
+        [자바의 신] 9장: 자바를 배우려면 접근 제어자는 꼭 알아야해요
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          강의
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          강의
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          반효경 운영체제
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          반효경 운영체제
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%EA%B0%95%EC%9D%98/%EB%B0%98%ED%9A%A8%EA%B2%BD%20%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/1.%20Introduction%20to%20Operating%20Systems/" class="md-nav__link">
+        Introduction to Operating Systems
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          네트워크
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          네트워크
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/" class="md-nav__link">
+        네트워크
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          알고리즘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          알고리즘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC/" class="md-nav__link">
+        [알고리즘] 다익스트라
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%88%9C%EC%97%B4%EA%B3%BC%20%EC%A1%B0%ED%95%A9/" class="md-nav__link">
+        [알고리즘] 순열과 조합
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%8B%9C%EA%B0%84%20%EB%B3%B5%EC%9E%A1%EB%8F%84/" class="md-nav__link">
+        [알고리즘] 시간 복잡도
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          크래프톤 정글
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          크래프톤 정글
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%20%ED%8A%B9%EA%B0%95/" class="md-nav__link">
+        네트워크 특강:초안
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          Pintos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pintos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pintos/Overview/" class="md-nav__link">
+        Pintos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pintos/Threads/" class="md-nav__link">
+        PROJECT 1: THREADS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pintos/User%20Programs/" class="md-nav__link">
+        PROJECT 2: USER PROGRAMS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pintos/%EA%B7%B8%EB%A6%B0%EB%B0%98%204%ED%8C%80%20%EC%A3%BC%EA%B0%84%20%EA%B3%B5%EC%9C%A0%3A%20User%20Program/" class="md-nav__link">
+        [Pintos] 그린반 4팀 주간 공유: User Program
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+          에세이
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          에세이
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          크래프톤 정글 중간 회고
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        크래프톤 정글 중간 회고
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4-3-4-6" class="md-nav__link">
+    미니 프로젝트(4월 3일 ~ 4월 6일)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-6-5-4" class="md-nav__link">
+    알고리즘(4월 6일 ~ 5월 4일)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c5-4-5-25" class="md-nav__link">
+    C언어(5월 4일 ~ 5월 25일)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-25" class="md-nav__link">
+    핀토스(5월 25일 ~ 진행중)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    개선해야 할 부분
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4-3-4-6" class="md-nav__link">
+    미니 프로젝트(4월 3일 ~ 4월 6일)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-6-5-4" class="md-nav__link">
+    알고리즘(4월 6일 ~ 5월 4일)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c5-4-5-25" class="md-nav__link">
+    C언어(5월 4일 ~ 5월 25일)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-25" class="md-nav__link">
+    핀토스(5월 25일 ~ 진행중)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    개선해야 할 부분
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">크래프톤 정글 중간 회고<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>작성일: 2023년 6월 6일 오전 12시 14분</p>
+<p>크래프톤 정글에서 공부를 한지 65일이 지났고 앞으로 공부할 수 있는 시간은 73일이 남았다.
+과제가 어렵고 공부량이 많아 정신없이 공부하다보니 벌써 전체 커리큘럼의 절반 정도가 지나있었다.
+이 시점에서 중간 회고를 작성하며 나를 돌아보고 앞으로 어떤 지점을 개선할지에 대한 성찰을 진행해보려 한다.</p>
+<h2 id="4-3-4-6">미니 프로젝트(4월 3일 ~ 4월 6일)<a class="headerlink" href="#4-3-4-6" title="Permanent link">&para;</a></h2>
+<p>정글에 처음 입소한 날 팀원들과 가까워지는 것을 목적으로 작은 서비스를 만드는 과제가 주어졌다.
+주어진 기간은 3일, 3일 동안 아이디어 회의와 기획을 하고 코드를 작성해야 했다.</p>
+<p>나의 경우 전 회사에서 이커머스와 SNS를 개발했던 경험이 있어 그리 어렵지 않게 완성했다.
+우리팀이 만든 서비스는 '정글 퀴즈'로, 정글에서 배운 것들을 퀴즈로 만들고 풀어보며 내가 잘 공부했는지 점검할 수 있는 서비스였다.</p>
+<p>다른 팀이 밤을 새우며 서비스를 개발할 동안, 우리는 진작 다 만들어서 여유롭게 테스트 및 디버깅을 진행하였고 일찍 들어가서 수면을 취했다.
+정글에서의 첫 과제를 만족스럽게 마무리한 덕분에 이때까지만 해도 나는 앞으로의 과정을 순탄하게 해쳐나갈 수 있을 것이라는 자신감에 차 있었다.
+하지만 얼마 지나지 않아 이것이 큰 착각이라는 것을 깨닫게 된다.</p>
+<h2 id="4-6-5-4">알고리즘(4월 6일 ~ 5월 4일)<a class="headerlink" href="#4-6-5-4" title="Permanent link">&para;</a></h2>
+<p>알고리즘 커리큘럼이 시작된 이후부터 멘붕의 연속이었다.
+회사에서 1년 반 가량 백엔드 개발자로 일을 했었는데 백준 실버 문제조차 풀기 버겁다는 것이 살짝 충격이었다.
+반면 컴공을 전공한 동료들은 매우 빠르게 치고 나갔다(이런 이유로 계속 마음이 조급해졌다).</p>
+<p>알고리즘을 총 4주간 공부했는데 공부한 주제는 다음과 같았다.</p>
+<ul>
+<li>1주차: 배열, 문자열, 재귀 함수, 정렬, 완전 탐색, 정수론</li>
+<li>2주차: 이분 탐색, 분할 정복, 스택, 큐, 우선순위 큐</li>
+<li>3주차: 그래프, BFS, DFS, 위상 정렬</li>
+<li>4주차: 동적 프로그래밍, 그리디</li>
+</ul>
+<p>한 주간 알고리즘 개념을 공부하고 문제를 풀어보며 해당 알고리즘에 대한 이해도를 높여갔다.
+매주 목요일에는 정글에서 제공한 시험 문제를 풀며 나의 성취도를 파악했다.
+1주차 ~ 2주차까지는 알고리즘을 접한지 얼마 되지 않아 많이 해맸지만 3주차부터는 조금씩 알고리즘 사고에 익숙해져서 느리지만 문제를 풀기 시작했다.</p>
+<p>알고리즘 커리큘럼을 처음 시작했을 당시에는 문제가 정말 어려워서 항상 무언가에 쫓기듯 공부했다.
+하지만 현재는 알고리즘 푸는 것을 나름 즐기고 있다. 알고리즘 스터디를 만들어 하루에 한 문제씩 풀고 있는데 어려운 문제를 풀었을 때 느낄 수 있는 성취감은 정말 짜릿하다.
+알고리즘 커리큘럼을 내게 '처음 어떤 것을 배울 때 낯설고 막막하더라도 스스로를 격려하며 꾸준히 노력하다보면 익숙해지고 능숙해질 수 있다' 것을 느끼게 해준 고마운 과정이라고 말할 수 있을 것 같다.</p>
+<h2 id="c5-4-5-25">C언어(5월 4일 ~ 5월 25일)<a class="headerlink" href="#c5-4-5-25" title="Permanent link">&para;</a></h2>
+<p>C언어 커리큘럼은 기초 문법을 공부하고 RB 트리, 말록, 웹 서버를 구현해보며 C언어 숙련도를 높이는 과정이었다.
+이 커리큘럼은 공부하는 요령이 부족해 힘들게 공부했었다.
+지금 생각해보면 빨리 문법을 익히고 csapp에 있는 코드를 따라 치고 이해하며 공부를 헸어야 했는데 이론 공부에 너무 비중을 두다보니 직접 구현해볼 시간이 부족했었다.</p>
+<p>비록 만족스러운 퀄리티로 구현하지는 못해 아쉽지만 내용 자체는 좋았다. 정글 과정이 끝나면 해당 부분들을 다시 공부하고 내 것으로 만들 계획이다.</p>
+<h2 id="5-25">핀토스(5월 25일 ~ 진행중)<a class="headerlink" href="#5-25" title="Permanent link">&para;</a></h2>
+<p>핀토스(pintOS)는 교육용으로 사용되는 작은 운영체제로 운영체제의 핵심 요소들의 구현을 지원한다.
+개발자는 핀토스를 통해 운영체제의 핵심 요소들을 구현해보며 보다 운영체제를 깊게 이해할 수 있게 된다.
+구현 해야 할 요소들은 다음과 같다.</p>
+<ul>
+<li><code>kernel thread</code></li>
+<li><code>loading and running user programs</code></li>
+<li><code>virtual memory</code></li>
+<li><code>file systems</code></li>
+</ul>
+<p>핀토스 과정은 현재 <code>User Programs</code> 부분을 진행하고 있는데 정말 어렵다.
+3주차의 <code>Virtual Memory</code>는 더 어렵다는데 이 어려운 과정에서 흐름을 놓치지 않고 성장하려면 지금보다 더 열심히 공부해야 할 것 같다.</p>
+<h2 id="_2">개선해야 할 부분<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>오늘 정글에 처음 입소했을 때 작성한 에세이를 읽었다.
+에세이에는 '<strong>정말 피나게 노력해서 크래프톤 정글의 협력사 레벨 회사에 입사하겠다</strong>'는 내용이 담겨있었다.
+에세이를 읽으면서 내가 처음 정글에 들어왔 때 어떤 심정으로, 어떤 자세로 들어왔는지를 되돌아볼 수 있었다.
+앞으로 남은 73일 동안 공부하여 협력사 레벨의 회사에 입사할 것이기 때문에 다음과 같은 부분을 개선하려고 한다.</p>
+<ul>
+<li>매일 아침마다 처음 작성한 에세이 읽으며 태도 가다듬기</li>
+<li>매일 8시간은 공부하는 시간, 2시간은 공부한 것을 정리하는 시간으로 설정(쉬는 시간, 식사 시간 제외)</li>
+<li>쉬는 시간에는 휴대폰을 보는 것이 아닌 산책을 가거나, 낮잠을 자거나, 정글 커리큘럼 외적으로 공부하고 싶었던 것 공부하기</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      
+        
+          <script src="../../../javascripts/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+        
+          <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        
+      
+    
+  </body>
+</html>

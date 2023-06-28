@@ -1,0 +1,1488 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0/%5B%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0%5D%2010%EC%9E%A5/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.17">
+    
+    
+      
+        <title>혼자 공부하는 컴퓨터 구조+운영체제 - Techpedia</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Techpedia" class="md-header__button md-logo" aria-label="Techpedia" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Techpedia
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              혼자 공부하는 컴퓨터 구조+운영체제
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Techpedia" class="md-nav__button md-logo" aria-label="Techpedia" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Techpedia
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        테크피디아:대문
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Books
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Books
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          혼자 공부하는 컴퓨터 구조+운영체제
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        혼자 공부하는 컴퓨터 구조+운영체제
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    운영체제 시작하기
+  </a>
+  
+    <nav class="md-nav" aria-label="운영체제 시작하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    운영체제를 알아야 하는 이유(완료)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    운영체제의 큰 그림(완료)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    프로세스와 스레드
+  </a>
+  
+    <nav class="md-nav" aria-label="프로세스와 스레드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    프로세스 개요(완료)
+  </a>
+  
+    <nav class="md-nav" aria-label="프로세스 개요(완료)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-switching" class="md-nav__link">
+    문맥 교환(Context Switching)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    프로세스의 메모리 영역
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    프로세스 상태와 계층 구조
+  </a>
+  
+    <nav class="md-nav" aria-label="프로세스 상태와 계층 구조">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    프로세스 상태
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    프로세스 계층 구조
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    스레드
+  </a>
+  
+    <nav class="md-nav" aria-label="스레드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    멀티 프로세스와 멀티 스레드
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    CPU 스케쥴링
+  </a>
+  
+    <nav class="md-nav" aria-label="CPU 스케쥴링">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu_1" class="md-nav__link">
+    CPU 스케쥴링 개요
+  </a>
+  
+    <nav class="md-nav" aria-label="CPU 스케쥴링 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    스케쥴링 큐
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu_2" class="md-nav__link">
+    CPU 스케쥴링 알고리즘
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    프로세스 동기화
+  </a>
+  
+    <nav class="md-nav" aria-label="프로세스 동기화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    동기화란
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    공유 자원과 임계 구역
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    동기화 기법
+  </a>
+  
+    <nav class="md-nav" aria-label="동기화 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    뮤텍스 락
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semaphore" class="md-nav__link">
+    세마포어(semaphore)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    모니터
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          자바의 신
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          자바의 신
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0/%5B%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0%5D%2010%EC%9E%A5/" class="md-nav__link">
+        [자바의 신] 10장: 자바에는 상속이라는 것이 있어요
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0/%5B%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0%5D%202%EC%9E%A5%20~%207%EC%9E%A5/" class="md-nav__link">
+        [자바의 신] 2장 ~ 7장
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0/%5B%EC%9E%90%EB%B0%94%EC%9D%98%20%EC%8B%A0%5D%209%EC%9E%A5/" class="md-nav__link">
+        [자바의 신] 9장: 자바를 배우려면 접근 제어자는 꼭 알아야해요
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          강의
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          강의
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          반효경 운영체제
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          반효경 운영체제
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EA%B0%95%EC%9D%98/%EB%B0%98%ED%9A%A8%EA%B2%BD%20%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/1.%20Introduction%20to%20Operating%20Systems/" class="md-nav__link">
+        Introduction to Operating Systems
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          네트워크
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          네트워크
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/" class="md-nav__link">
+        네트워크
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          알고리즘
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          알고리즘
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC/" class="md-nav__link">
+        [알고리즘] 다익스트라
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%88%9C%EC%97%B4%EA%B3%BC%20%EC%A1%B0%ED%95%A9/" class="md-nav__link">
+        [알고리즘] 순열과 조합
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98/%EC%8B%9C%EA%B0%84%20%EB%B3%B5%EC%9E%A1%EB%8F%84/" class="md-nav__link">
+        [알고리즘] 시간 복잡도
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          크래프톤 정글
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          크래프톤 정글
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4%20%EC%A0%95%EA%B8%80/%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%20%ED%8A%B9%EA%B0%95/" class="md-nav__link">
+        네트워크 특강:초안
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          Pintos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pintos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4%20%EC%A0%95%EA%B8%80/Pintos/Overview/" class="md-nav__link">
+        Pintos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4%20%EC%A0%95%EA%B8%80/Pintos/Threads/" class="md-nav__link">
+        PROJECT 1: THREADS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4%20%EC%A0%95%EA%B8%80/Pintos/User%20Programs/" class="md-nav__link">
+        PROJECT 2: USER PROGRAMS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4%20%EC%A0%95%EA%B8%80/Pintos/%EA%B7%B8%EB%A6%B0%EB%B0%98%204%ED%8C%80%20%EC%A3%BC%EA%B0%84%20%EA%B3%B5%EC%9C%A0%3A%20User%20Program/" class="md-nav__link">
+        [Pintos] 그린반 4팀 주간 공유: User Program
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+          에세이
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          에세이
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4%20%EC%A0%95%EA%B8%80/%EC%97%90%EC%84%B8%EC%9D%B4/%ED%81%AC%EB%9E%98%ED%94%84%ED%86%A4%20%EC%A0%95%EA%B8%80%20%EC%A4%91%EA%B0%84%20%ED%9A%8C%EA%B3%A0/" class="md-nav__link">
+        크래프톤 정글 중간 회고
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    운영체제 시작하기
+  </a>
+  
+    <nav class="md-nav" aria-label="운영체제 시작하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    운영체제를 알아야 하는 이유(완료)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    운영체제의 큰 그림(완료)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    프로세스와 스레드
+  </a>
+  
+    <nav class="md-nav" aria-label="프로세스와 스레드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    프로세스 개요(완료)
+  </a>
+  
+    <nav class="md-nav" aria-label="프로세스 개요(완료)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#context-switching" class="md-nav__link">
+    문맥 교환(Context Switching)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    프로세스의 메모리 영역
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    프로세스 상태와 계층 구조
+  </a>
+  
+    <nav class="md-nav" aria-label="프로세스 상태와 계층 구조">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    프로세스 상태
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    프로세스 계층 구조
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    스레드
+  </a>
+  
+    <nav class="md-nav" aria-label="스레드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    멀티 프로세스와 멀티 스레드
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    CPU 스케쥴링
+  </a>
+  
+    <nav class="md-nav" aria-label="CPU 스케쥴링">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cpu_1" class="md-nav__link">
+    CPU 스케쥴링 개요
+  </a>
+  
+    <nav class="md-nav" aria-label="CPU 스케쥴링 개요">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    스케쥴링 큐
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu_2" class="md-nav__link">
+    CPU 스케쥴링 알고리즘
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    프로세스 동기화
+  </a>
+  
+    <nav class="md-nav" aria-label="프로세스 동기화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    동기화란
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    공유 자원과 임계 구역
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    동기화 기법
+  </a>
+  
+    <nav class="md-nav" aria-label="동기화 기법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    뮤텍스 락
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semaphore" class="md-nav__link">
+    세마포어(semaphore)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    모니터
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">혼자 공부하는 컴퓨터 구조+운영체제<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">운영체제 시작하기<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">운영체제를 알아야 하는 이유(완료)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>요약: 하드웨어를 조작하는 운영체제를 이해하면 하드웨어와 프로그램을 더 깊이 이해하게 되고 문제 해결 능력이 증가한다.</p>
+</blockquote>
+<p>운영체제는 실행할 프로그램에 자원을 할당하고, 프로그램이 문제 없이 실행되도록 돕는 <strong>프로그램</strong>이다.
+결국 운영체제도 프로그램이기에, 운영체제는 커널 영역이라는 메모리 영역에 적재된다(반대로 응용 프로그램이 적재되는 메모리 영역을 사용자 영역이라고 한다).</p>
+<p>운영체제는 컴퓨터 하드웨어와 응용 프로그램 사이의 인터페이스 역할을 한다.
+따라서 하드웨어를 조작하는 운영체제를 이해하면 하드웨어와 응용 프로그램을 더 깊이 이해하게 되고 문제 해결의 실마리를 찾을 수 있게 된다.</p>
+<h3 id="_4">운영체제의 큰 그림(완료)<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>요약:</p>
+<ul>
+<li>운영체제의 핵심은 커널이다.</li>
+<li>사용자 프로그램은 컴퓨터 자원에 직접 접근할 수 없기에 시스템콜을 사용해 운영 체제에 해당 작업을 처리하도록 요청한다.</li>
+<li>시스템콜이 발생하면 CPU는 사용자 모드에서 커널 모드로 전환한다. 이후 커널 코드 실행이 끝나면 다시 사용자 모드로 전환된다.</li>
+</ul>
+</blockquote>
+<p>운영체제의 핵심은 커널이다. 커널은 운영체제의 핵심 기능을 담당하는데 대표적으로 자원 접근 및 할당, 프로세스 관리, 파일 시스템 관리 등을 처리한다.</p>
+<p>일반적으로 사용자 프로그램은 직접 컴퓨터 자원에 접근할 수 없다.
+이는 자원을 체계적으로 관리하고 사용자 프로그램에 오류가 발생했을 때 컴퓨터 전체에 악영향을 미치는 것을 방지하기 위함이다.
+따라서 사용자 프로그램은 운영체제에게 자원을 사용할 때 운영 체제에 요청을 해야 하는데 이를 시스템콜이라 한다.</p>
+<p>시스템콜은 일종의 소프트웨어 인터럽트로, 시스템콜을 사용하면 CPU는 지금까지의 작업을 백업하고, 커널 영역 내에 시스템콜을 수행하는 코드를 실행한 뒤 다시 기존에 실행하던 응용 프로그램으로 복귀하여 실행을 계속해 나간다.</p>
+<p>참고로 CPU가 명령을 수행하는 모드를 사용자 모드와 커널 모드로 나누는데 사용자 모드는 사용자 프로그램의 코드를 실행시키는 모드이고(자원 접근 불가),
+커널 모드는 커널의 기능을 사용하고 자원에 접근할 수 있는 모드이다.</p>
+<h2 id="_5">프로세스와 스레드<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="_6">프로세스 개요(완료)<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>요약:</p>
+<ul>
+<li>프로세스는 실행중인 프로그램이다.</li>
+<li>운영체제는 프로세스를 관리하기 위해 PCB를 커널 영역에 저장하고 이용한다.</li>
+<li>프로세스 간에 실행을 전환하는 것을 문맥 교환이라고 한다.</li>
+<li>프로세스는 메모리에 코드 영역, 데이터 영역, 스택 영역, 힙 영역으로 나뉘어 배치된다.</li>
+</ul>
+</blockquote>
+<p>프로세스는 메모리에 적재된 실행 중인 프로그램이다. 프로세스는 foreground process와 background process로 구분할 수 있다.</p>
+<ul>
+<li>foreground process: 사용자가 보이는 앞에서 실행되는 프로세스</li>
+<li>background process: 사용자가 보지 못하는 뒤에서 실행되는 프로세스</li>
+</ul>
+<p>프로세스는 실행되기 위해 CPU가 필요하지만 CPU는 한정적이다.
+따라서 프로세스는 한정된 시간동안 CPU를 이용하고 시간이 다 됐다고 알리는 타이머 인터럽트 발생 시 차례를 양보한다.</p>
+<p>운영체제는 빠르게 번갈아 실행되는 프로세스를 관리하기 위해 프로세스의 메타 데이터가 저장된 자료구조, PCB(Process Control Block)를 커널 영역에 저장하고 이용한다.</p>
+<p>다음은 PCB에 저장된 데이터들이다.</p>
+<ul>
+<li>PID: 프로세스 식별을 위해 부여된 고유한 번호가 저장된다.</li>
+<li>레지스터 값: 프로세스는 실행 중 CPU를 양보하게 됐을 때 해당 프로세스가 실행하며 사용했던 레지스터 값을 저장한다. 이후 다시 CPU 사용 차례가 됐을 때 사용했던 레지스터 값을 복원하여 이전까지 진쟁했던 작업들을 그대로 이어 실행한다.</li>
+<li>프로세스 상태: 현재 프로세스가 어떤 상태인지에 대한 정보로 생성(New), 준비(Ready), 실행(Running), 대기(Blocked), 종료(Terminated) 상태가 있다.</li>
+<li>CPU 스케쥴링 정보: 프로세스가 언제, 어떤 순서로 CPU를 할당받을지에 대한 정보갸 저장된다.</li>
+<li>메모리 관리 정보: 프로세스의 주소를 알기 위한 페이지 테이블 정보와, 베이스 레지스터, 한계 레지스터 값과 같은 정보들이 들어간다.</li>
+<li>사용할 파일과 입출력 장치 정보: 프로세스에 어떤 입출력 장치가 할당되었는지, 어떤 파일들을 열었는지에 대한 정보들이 저장된다.</li>
+</ul>
+<h4 id="context-switching">문맥 교환(Context Switching)<a class="headerlink" href="#context-switching" title="Permanent link">&para;</a></h4>
+<p>문맥은 현재 실행중인 프로세스의 상태로, 프로그램 카운터, 레지스터 값, 스택, 메모리 정보등이 포함된다.</p>
+<p>문맥 교환이란 프로세스의 실행 순서가 넘어갈 때 기존 프로세스의 문맥을 PCB에 복원하고 새로운 프로세스의 문맥을 PCB로부터 복구하여 새로운 프로세스를 실행하는 것이다.</p>
+<p>문맥 교환은 여러 프로세스가 끊임없이 빠르게 번갈아가며 실행되는 원리이다.</p>
+<h4 id="_7">프로세스의 메모리 영역<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>사용자 메모리 영역에 저장된 프로세스는 코드 영역, 데이터 영역, 힙 영역, 스택 영역으로 나누어 저장된다.
+다음 그림은 프로세스의 메모리 영역을 나타낸다.</p>
+<h3 id="_8">프로세스 상태와 계층 구조<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>요약:</p>
+<ul>
+<li>프로세스는 빠르게 번갈아 실행되는 과정에서 생성, 준비, 실행, 대기, 종료 상태를 갖는다.</li>
+<li>프로세스는 실행 도중 시스템콜을 통해 다른 프로세스를 생성할 수 있다.</li>
+</ul>
+</blockquote>
+<h4 id="_9">프로세스 상태<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>운영체제는 프로세스의 상태를 PCB에 기록한다.</p>
+<p>다음은 프로세스의 상태이다.</p>
+<ul>
+<li>생성(New): 프로세스가 막 생성되어 PCB를 할당 받은 상태</li>
+<li>준비(Ready): 언제든 CPU를 할당 받아 실행 가능한 상태</li>
+<li>실행(Running): CPU를 할당 받아 실행 중인 상태</li>
+<li>대기(Blocked): 프로세스가 특정 이벤트(예: I/O 작업 완료)를 기다리는 상태. 이 상태에서 프로세스는 CPU를 사용할 수 없다.</li>
+<li>종료(Terminated): 프로세스가 종료된 상태. 이후 프로세스와 PCB를 메모리에서 폐기한다.</li>
+</ul>
+<h4 id="_10">프로세스 계층 구조<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>프로세스는 실행 중 시스템콜을 통해 다른 프로세스를 생성할 수 있는데 생성된 프로세스를 자식 프로세스, 생성한 프로세스를 부모 프로세스라고 한다. 이런 과정을 도표로 그리면 아래와 같은 트리구조를 띄는데, 이를 프로세스 계층 구조라고 한다.</p>
+<p>다음은 프로세스가 자식 프로세스를 생성하는 과정이다.</p>
+<ol>
+<li><code>fork()</code> 함수를 호출하여 자신의 복사본을 자식 프로세스로 생성한다.</li>
+<li><code>exec()</code> 함수를 호출하여 자신의 메모리 공간을 다른 프로그램으로 교체한다.</li>
+</ol>
+<h3 id="_11">스레드<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>요약</p>
+<ul>
+<li>스레드란 프로세스 내의 실행 흐름 단위이다.</li>
+<li>스레드는 프로세스의 자원을 공유하기에 멀티프로세스 간 통신보다 스레드 간 통신이 빠르고 간단하다(하지만 동기화 및 데드락 같은 복잡한 이슈를 주의해야 한다.)</li>
+</ul>
+</blockquote>
+<p>스레드는 프로세스 내의 실행흐름의 단위로 하나의 프로세스는 하나 이상의 스레드를 갖는다. 스레드는 프로세스 자원을 공유한채 실행에 필요한 최소한의 데이터만을 갖고 실행된다.</p>
+<p>다음은 스레드의 구성 요소이다.</p>
+<ul>
+<li>스레드 ID</li>
+<li>프로그램 카운터를 비롯한 레지스터 값</li>
+<li>스택</li>
+</ul>
+<p>초기에는 여러 작업을 할 때 멀티 프로세스를 사용했지만 자원을 공유하지 않기 때문에 문맥 교환(context switch) 오버 헤드 발생
+스레드는 프로세스 내부에 존재하기 떄문에 자원을 공유한다.</p>
+<h4 id="_12">멀티 프로세스와 멀티 스레드<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>멀티 프로세스: 여러 프로세스를 동시에 실행하는 것</li>
+<li>멀티 스레드: 여러 스레드를 동시에 실행하는 것</li>
+</ul>
+<p>스레드는 스택, 레지스터 값, 스레드 ID 값만 다르고 같은 프로세스 자원을 공유하기 때문에 협력과 통신에 유리하다. 하지만 자원을 공유한다는 특징으로 인해 하나의 스레드에 문제가 생기면 프로세스 전체에 문제가 생길 수 있다.</p>
+<h2 id="cpu">CPU 스케쥴링<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h2>
+<h3 id="cpu_1">CPU 스케쥴링 개요<a class="headerlink" href="#cpu_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>요약</p>
+</blockquote>
+<p>CPU 스케쥴링이란 운영체제가 다수의 프로세스 혹은 스레드 중에서 어떤 것에 다음 CPU 자원을 할당할지 결정하는 과정이다.</p>
+<p>운영체제는 PCB에 프로세스 우선순위를 저장하고 우선순위가 높은 순서대로 CPU 자원을 할당한다.</p>
+<h4 id="_13">스케쥴링 큐<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<p>스케쥴링 큐란 자원 이용을 원하는 프로세스가 큐에 들어가 줄서는 것을 의미한다. 프로세스에 자원을 할당할 때마다 CPU가 모든 PCB를 탐색하여 우선 순위가 가장 높은 프로세스를 찾는 것은 비효율적이다.</p>
+<p>따라서 스케쥴링 큐를 구현하고 프로세스의 우선순위를 관리한다.</p>
+<h3 id="cpu_2">CPU 스케쥴링 알고리즘<a class="headerlink" href="#cpu_2" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>요약</p>
+</blockquote>
+<p>CPU 스케쥴링 알고리즘 7개 있다.</p>
+<h2 id="_14">프로세스 동기화<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="_15">동기화란<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>요약</p>
+</blockquote>
+<p>멀티 프로세스, 멀티 스레드로 작업을 하다보면 각 프로세스와 스레드가 서로 다른 공유 자원의 값을 갖게 될 수 있다.
+모든 프로세스와 스레드가 같은 자원 값을 유지하도록 하는 것을 동기화라고 한다.</p>
+<p>동기화를 하기 위해서는 코드 시행 순서를 컨트롤 하는 방법과, 한 자원에 대해서 동시에 여러 프로세스가 접근하지 못하게 하는 방법이 있다.</p>
+<h3 id="_16">공유 자원과 임계 구역<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ul>
+<li>공유 자원(Shared Resource): 여러 프로세스와 스레드가 공유하는 자원으로 전역 변수, 입출력 장치, 보조기억장치 등이 될 수 있다.</li>
+<li>임계 구역(Critical Section): 여러 프로세스와 스레드가 동시에 접근하면 문제가 발생할 수 있는 코드 영역으로 주로 공유 자원에 접근하거나 수정하는 코드를 포함한다.</li>
+<li>레이스 컨디션(Race Condition): 여러 프로세스나 스레드가 임계 구역에 동시에 접근하여 자원의 일관성이 깨진 상태</li>
+</ul>
+<h3 id="_17">동기화 기법<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h4 id="_18">뮤텍스 락<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>뮤텍스 락은 여러 프로세스가 동시에 한 자원에 접근하지 못하도록 하는 동기화 도구이다.
+뮤택스 락은 lock 상태를 표현하는 변수와 락을 거는 <code>acquire()</code> 함수와 락을 해제하는 <code>release()</code> 함수로 구성된다.
+어떤 프로세스가 임계 지점에 들어가기전에 <code>acquire()</code> 함수를 호출하여 락을 걸고 임계 지점에서 작업을 다 처리한 후에 <code>release()</code> 함수를 호출하여 다른 프로세스가 임계 구역에 접근할 있도록 한다.</p>
+<div class="highlight"><pre><span></span><code><span class="n">lock</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">acquire</span><span class="p">():</span>
+    <span class="k">while</span> <span class="n">lock</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="n">lock</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+<span class="k">def</span> <span class="nf">release</span><span class="p">():</span>
+    <span class="n">lock</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">acquire</span><span class="p">()</span>
+<span class="c1"># 임계 구역</span>
+<span class="n">release</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="semaphore">세마포어(semaphore)<a class="headerlink" href="#semaphore" title="Permanent link">&para;</a></h4>
+<p>세마포어는 신호라는 뜻으로 임계 구역 진입전에 wait 신호가 있으면 대기하고 signal 신호가 있으면 임계 구역에 진입한다.</p>
+<div class="highlight"><pre><span></span><code><span class="n">S</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">def</span> <span class="nf">wait</span><span class="p">():</span>
+    <span class="n">S</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">S</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+
+<span class="k">def</span> <span class="nf">signal</span><span class="p">():</span>
+    <span class="n">S</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div>
+<h4 id="_19">모니터<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<p>세마포어를 사용할 경우 wait 함수와 signal 함수 호출 실수가 있을 수 있다. 모니터는 이런 점을 보완한 동기화 도구이다.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.b425cdc4.min.js"></script>
+      
+        
+          <script src="../../javascripts/mathjax.js"></script>
+        
+      
+        
+          <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        
+      
+        
+          <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+      
+        
+          <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        
+      
+    
+  </body>
+</html>
